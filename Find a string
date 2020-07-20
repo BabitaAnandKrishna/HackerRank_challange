@@ -20,8 +20,26 @@ Sample Output
 2
 '''
 
+def count_substring(string, sub_string):
+    # findsting = string.find(sub_string)
+    counter=0
+    i=0
+    while i<len(string):
+        if string.find(sub_string,i)>=0:
+            i=string.find(sub_string,i)+1
+            counter+=1
+        else: break
+    return counter
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
 
 
+'''
 def count_substring(string, sub_string):
     findsting = string.find(sub_string)
     return findsting
@@ -31,7 +49,7 @@ if __name__ == '__main__':
     sub_string = input().strip()
     
     count = count_substring(string, sub_string)
-    print(count)
+    print(count)'''
     
     
     
